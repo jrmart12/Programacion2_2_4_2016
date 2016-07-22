@@ -60,9 +60,9 @@ public class TestCalendar {
         
         //holandes
         String diahol = monique.getDisplayName(Calendar.DAY_OF_WEEK, 
-                Calendar.LONG, Locale.forLanguageTag("nl"));
+                Calendar.LONG, Locale.FRENCH);
         String meshol = monique.getDisplayName(Calendar.MONTH, 
-                Calendar.LONG, Locale.forLanguageTag("nl"));
+                Calendar.LONG, Locale.FRENCH);
         
         System.out.println("Monique en Italiano: "+diaita+"-"+mesita);
         System.out.println("Monique en Español: "+diaes+"-"+meses);
