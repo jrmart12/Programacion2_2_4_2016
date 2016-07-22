@@ -72,6 +72,6 @@ public class TestCalendar {
         System.out.println("Monique en Italiano: "+diaita+"-"+mesita);
         System.out.println("Monique en Español: "+diaes+"-"+meses);
         System.out.println("Monique en Holandes: "+diahol+"-"+meshol);
-        System.out.println("Monique en Holandes: "+diafra+"-"+mesfra);
+        System.out.println("Monique en Frances: "+diafra+"-"+mesfra);
     }
 }
