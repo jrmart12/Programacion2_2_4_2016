@@ -21,5 +21,8 @@ public class TestDate {
         long m = 568542365;
         Date antes = new Date(m);
         System.out.println("Mili 1: " + antes);
+        //comparacion
+        if(hoy.after(antes))
+            System.out.println("Hoy es el futuro!");
     }
 }
