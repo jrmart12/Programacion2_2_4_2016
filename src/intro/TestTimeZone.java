@@ -20,7 +20,8 @@ public class TestTimeZone {
         Calendar japon = Calendar.getInstance(TimeZone.getTimeZone("GMT+9"));
         Calendar australia = Calendar.getInstance(TimeZone.getTimeZone("GMT+10"));
             
-        System.out.println("Hora en Honduras "+honduras.get(Calendar.HOUR_OF_DAY)+":"+honduras.get(Calendar.MINUTE));
+        System.out.println("Hora en Honduras "+honduras.get(Calendar.HOUR_OF_DAY)+":"+honduras.get(Calendar.MINUTE)+ " " + 
+                    (honduras.get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM"));
         System.out.println("Hora en NYC "+newYorkCity.get(Calendar.HOUR_OF_DAY)+":"+newYorkCity.get(Calendar.MINUTE));        
         System.out.println("Hora en Japon "+japon.get(Calendar.HOUR_OF_DAY)+":"+japon.get(Calendar.MINUTE));
         System.out.println("Hora en Australia "+australia.get(Calendar.HOUR_OF_DAY)+":"+australia.get(Calendar.MINUTE));
