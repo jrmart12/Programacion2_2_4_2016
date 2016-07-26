@@ -13,9 +13,16 @@ public class TestRecursion {
     public static void main(String[] args) {
         
         System.out.println("Print(5): \n-------------");
-        FuncionesRecursivas.print(15);
+        FuncionesRecursivas.print(5);
         
         System.out.println("PrintMismo(5,3): \n-------------");
         FuncionesRecursivas.printMismo(5, 5);
+        
+        System.out.println("Suma(5): \n-------------");
+        System.out.println("Up: "+FuncionesRecursivas.sumaNUp(5));
+        System.out.println("Down: "+FuncionesRecursivas.sumaNDown(5));
+        
+        System.out.println("pot(2,5): \n-------------");
+        System.out.println("Up: "+FuncionesRecursivas.potUp(2,5));
     }
 }
