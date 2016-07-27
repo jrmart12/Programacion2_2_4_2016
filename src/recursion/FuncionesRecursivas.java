@@ -48,5 +48,41 @@ public class FuncionesRecursivas {
         return 1;
     }
     
+    public static int potDown(int b, int e){
+        return potDown(b, e, 1);
+    }
+    
+    private static int potDown(int b, int e, int pot){
+        if(e > 0)
+            return potDown(b, e-1, pot*b);
+        return pot;
+    }
+    
+    public static boolean isPalindromo(String s){
+        return isPalindromo(s,0,s.length()-1);
+    }
+
+    private static boolean isPalindromo(String s, int ini, int fin) {
+        if(ini < fin){
+            if(s.charAt(ini) == s.charAt(fin))
+                return isPalindromo(s,ini+1,fin-1);
+            return false;
+        }
+        return true;
+    }
+    
+    public static int mcd(int n1, int n2){
+        return mcd(n1,n2,2);
+    }
+
+    private static int mcd(int n1, int n2, int d) {
+        if(n1 >= d && n2 >= d){
+            if(n1 % d == 0 && n2 % d == 0)
+                return mcd(n1/d, n2/d, d) * d;
+            return mcd(n1, n2, d+1);
+        }
+        return 1;
+    }
+    
     
 }
