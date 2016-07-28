@@ -32,5 +32,14 @@ public class TestRecursion {
         
         System.out.println("MCD: \n-------------");
         System.out.println("Entre (36,24): "+FuncionesRecursivas.mcd(36,24));
+        
+        System.out.println("Piramide: \n-------------");
+        FuncionesRecursivas.piramide(5); 
+        
+        System.out.println("Fibonacci: \n-------------");
+        System.out.println("F(20): "+FuncionesRecursivas.fibonacci(20));
+        
+        System.out.println("Desco\n------------------");
+        FuncionesRecursivas.desco(5);
     }
 }
