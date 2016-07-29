@@ -206,6 +206,21 @@ public class TrabajoGrupo1 {
     }
     
     public static void main(String[] args) {
+        TrabajoGrupo1 tg1 = new TrabajoGrupo1(5);
+        //llenar
+        tg1.llenar();
+        tg1.print();
+        System.out.println("Suma: "+tg1.suma());
+        System.out.println("Pares: "+tg1.divisibleEntre(2));
+        System.out.println("Esta el 5?: "+tg1.buscar(5));
+        System.out.println("Maximo: "+tg1.maximo());
+        System.out.println("Factorial de[0]: "+tg1.factorialDe(0));
+        tg1.reemplazar(1, 11);
+        tg1.print();
+        System.out.println("Hay primo: "+tg1.hayPrimo());
+        System.out.println("Sumar [1]: "+tg1.sumaDigitosDe(1));
+        tg1.sort();
+        tg1.print();
         
     }
     
