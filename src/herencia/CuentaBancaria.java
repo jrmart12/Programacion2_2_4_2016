@@ -16,6 +16,16 @@ public class CuentaBancaria {
     protected double saldo, tasa;
     protected String cliente, tipo;
     protected Calendar apertura;
+    
+    public CuentaBancaria(int n, String c, String t){
+        System.out.println("Llamaste al papa vea?");
+        numero = n;
+        cliente = c;
+        tipo = t;
+        saldo = 0;
+        apertura = Calendar.getInstance();
+        tasa = 0;
+    }
 
     public int getNumero() {
         return numero;
