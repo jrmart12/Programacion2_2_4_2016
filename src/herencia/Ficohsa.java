@@ -11,7 +11,7 @@ package herencia;
  */
 public class Ficohsa {
     public static void main(String[] args) {
-        CuentaAhorro ca = new CuentaAhorro(1,"Frances","Lps");
+        CuentaBancaria ca = new CuentaAhorro(1,"Frances","Lps");
         System.out.println(ca);
         
         if(ca instanceof CuentaAhorro)

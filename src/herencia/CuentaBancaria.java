@@ -66,4 +66,8 @@ public class CuentaBancaria {
         }
         return false; 
     }
+    
+    public void quienSoy(){
+        System.out.println("CuentaBancaria Padre");
+    }
 }
