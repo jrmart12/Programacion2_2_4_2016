@@ -7,24 +7,22 @@ package herencia;
 
 import java.util.Calendar;
 
-/**lll
+/**
  *
  * @author Mae Lindell
  */
 public class CuentaplazoFijo extends CuentaBancaria {
-     private Calendar FindePlazo;
+     private Calendar findePlazo;
   
     
     public CuentaplazoFijo(int n,String c,String t){
         super(n,c,t);
-        FindePlazo = Calendar.getInstance();
+        findePlazo = Calendar.getInstance();
     }
     
     public void setPlazo(int y, int m, int d) {
           
-        FindePlazo.set(y,m,d);
+        findePlazo.set(y,m,d);
         
     }
-    
-    
 }
