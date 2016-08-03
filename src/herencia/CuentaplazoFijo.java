@@ -28,4 +28,11 @@ public class CuentaPlazoFijo extends CuentaBancaria {
     public void quienSoy(){
         System.out.println("CuentaPlazoFijo Hija");
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+", finPlazo"+findePlazo.getTime();
+    }
+    
+    
 }

@@ -70,4 +70,12 @@ public class CuentaBancaria {
     public void quienSoy(){
         System.out.println("CuentaBancaria Padre");
     }
+
+    @Override
+    public String toString() {
+        return "numero=" + numero + ", cliente=" + cliente +
+                ", saldo= Lps." + saldo + ", tipo=" + tipo;
+    }
+    
+    
 }

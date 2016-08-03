@@ -27,4 +27,9 @@ public class CuentaAhorro extends CuentaBancaria {
     public void quienSoy(){
         System.out.println("CuentaAhorro Hija");
     }
+    
+    @Override
+    public String toString(){
+        return super.toString()+", activa="+isActiva();
+    }
 }

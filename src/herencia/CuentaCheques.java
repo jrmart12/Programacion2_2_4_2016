@@ -19,4 +19,11 @@ public class CuentaCheques extends CuentaBancaria {
     public void quienSoy(){
         System.out.println("CuentaCheques Hija");
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+", chhequera # 1"; 
+    }
+    
+    
 }
