@@ -21,10 +21,7 @@ public class CuentaplazoFijo extends CuentaBancaria {
     }
     
     public void setPlazo(int y, int m, int d) {
-        int año = y;
-        int mes = m;
-        int dia = d;
-        
+          
         FindePlazo.set(y,m,d);
         
     }
