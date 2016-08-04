@@ -13,15 +13,16 @@ import java.util.Calendar;
  */
 public class CuentaPlazoFijo extends CuentaBancaria {
      private Calendar findePlazo;
-  
+     private double intereses;
     
     public CuentaPlazoFijo(int n,String c,String t){
         super(n,c,t);
+        intereses = 0;
         findePlazo = Calendar.getInstance();
     }
     
     public void setPlazo(int y, int m, int d) {
-        findePlazo.set(y,m,d);
+        findePlazo.set(y,m-1,d);
     }
     
     @Override
@@ -32,6 +33,15 @@ public class CuentaPlazoFijo extends CuentaBancaria {
     @Override
     public String toString() {
         return super.toString()+", finPlazo"+findePlazo.getTime();
+    }
+
+    @Override
+    public boolean retirar(double m) {
+         if(m < intereses){
+            intereses -= m;
+            return true;
+        }
+        return false; 
     }
     
     

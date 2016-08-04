@@ -23,6 +23,11 @@ public class BAC {
         
         //imprimirlos
         for(CuentaBancaria cb : cuentas){
+            
+            if(cb instanceof CuentaPlazoFijo){
+                ((CuentaPlazoFijo)cb).setPlazo(2020,10,10);
+            }
+            
             System.out.print("-"+cb+" ");
             cb.quienSoy();
         }

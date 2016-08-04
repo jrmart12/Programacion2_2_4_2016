@@ -17,10 +17,17 @@ public class CuentaAhorro extends CuentaBancaria {
     public CuentaAhorro(int n, String c, String t){
         super(n,c,t);
         tasa = 0.05;
+        refreshUltimoUso();
+    }
+    
+    private void refreshUltimoUso(){
+       ultimoUso = Calendar.getInstance(); 
     }
     
     public boolean isActiva(){
-        return true;
+        Calendar hace6 = Calendar.getInstance();
+        hace6.add(Calendar.MONTH, -6);
+        return ultimoUso.after(hace6);
     }
     
     @Override
@@ -30,6 +37,28 @@ public class CuentaAhorro extends CuentaBancaria {
     
     @Override
     public String toString(){
-        return super.toString()+", activa="+isActiva();
+        return super.toString()+", activa="+isActiva()+
+                ", tasa="+tasa;
     }
+
+    @Override
+    public void depositar(double m) {
+        if(isActiva()){
+            super.depositar(m);
+            refreshUltimoUso();
+        }
+    }
+
+    @Override
+    public boolean retirar(double m) {
+        if(isActiva()){
+            refreshUltimoUso();
+            return super.retirar(m);
+        }
+        return false;
+    }
+    
+    
+    
+    
 }
