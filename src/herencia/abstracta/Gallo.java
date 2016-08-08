@@ -9,19 +9,20 @@ package herencia.abstracta;
  *
  * @author Aula
  */
-public abstract class Animal {
-    protected int patas;
+public class Gallo extends Animal {
 
-    public Animal(int patas) {
-        this.patas = patas;
+    public Gallo() {
+        super(2);
     }
 
-    public int getPatas() {
-        return patas;
+    @Override
+    public void hablar() {
+        System.out.println("Ki KiriKiiii");
     }
-    
-    public abstract void hablar();
-    public abstract void comer();
-    
+
+    @Override
+    public void comer() {
+        System.out.println("Semillas y Gusanos");
+    }
     
 }
