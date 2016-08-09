@@ -84,5 +84,42 @@ public class FuncionesRecursivas {
         return 1;
     }
     
+    public static void piramide(int filas){
+        piramide(filas,1,1);
+    }
+
+    private static void piramide(int filas, int f, int c) {
+        if(f <= filas){
+            if(c <= f){
+                System.out.print("*");
+                piramide(filas, f, c+1);
+            }
+            else{
+                System.out.println("");
+                piramide(filas, f+1, 1);
+            }
+        }
+    }
     
+    public static int fibonacci(int n){
+        if(n > 1)
+            return fibonacci(n-1) + fibonacci(n-2);
+        return n;
+    }
+    
+    /*desco(4)
+     => 1+1+1+1
+         2+2
+        3+1
+     */
+    public static void desco(int n){
+        desco(n,1,0, " ", n);
+    }
+
+    private static void desco(int n, int pos, int s, String cad, int n2) {
+        if(s == n2)
+            System.out.println(cad);
+        for(int i=pos; i <= n; i++)
+            desco(n-i, i, s+i, cad+i+" ", n2);
+    }
 }
